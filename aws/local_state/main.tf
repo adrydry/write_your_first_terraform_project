@@ -1,16 +1,9 @@
 terraform {                                                          
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
+  provider "aws" {
+  region     = "us-west-2"
+  access_key = "AKIAUJEDML6P2QGGBPWR"
+  secret_key = "WeSywPn3Rc76HYDR4etCHQnT/uex8XBzjZc+yHwIy"
   required_version = ">= 1.4.4"
-}
-
-provider "aws" {
-  region  = "us-west-2"
 }
 
 resource "aws_instance" "app_server" {
